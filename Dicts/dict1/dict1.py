@@ -2,7 +2,8 @@ def create_dict_from_lists(keys, values):
     """
     This function returns a dict made from two lists.
     """
-    pass  # implement me
+    dictionary = dict(zip(keys, values)) # implement me
+    return dictionary
 
 def merge_two_dicts(d1, d2):
     """
@@ -42,7 +43,11 @@ def get_key_of_min_value(ddd):
     """
     Get the key of the minimum value from a dictionary
     """
-    pass
+    value = min(ddd.values())
+    for key,val in ddd:
+        if val == value:
+            return key
+     
 
 def get_key_of_max_value(ddd):
     """

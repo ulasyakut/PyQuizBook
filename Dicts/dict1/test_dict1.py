@@ -1,7 +1,7 @@
 import unittest
-from dict1 import dict1
+#from dict1 import dict1
 
-
+import dict1
 class Dict1Test(unittest.TestCase):
 
     def test_create_dict_from_lists(self):
