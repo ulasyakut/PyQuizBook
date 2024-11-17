@@ -9,7 +9,8 @@ def merge_two_dicts(d1, d2):
     """
     Merge two Python dictionaries into one
     """
-    pass  # implement me
+    d1.update(d2)
+    return d1  # implement me
 
 def init_dict_with_values(lst, d1):
     """
@@ -30,7 +31,12 @@ def delete_keys_from_dict(datadict, keylist):
     """
     Delete a list of keys from a dictionary
     """
-    pass
+     
+    d = datadict.copy()
+    for i in keylist:
+        d.pop(i)
+
+    return d
 
 def check_dict_for_key(datadict, key):
     """
@@ -44,7 +50,7 @@ def get_key_of_min_value(ddd):
     Get the key of the minimum value from a dictionary
     """
     value = min(ddd.values())
-    for key,val in ddd:
+    for key,val in ddd.items():
         if val == value:
             return key
      
@@ -53,4 +59,7 @@ def get_key_of_max_value(ddd):
     """
     Get the key of the maximum value from a dictionary
     """
-    pass
+    value = max(ddd.values())
+    for key,val in ddd.items():
+        if val == value:
+            return key
